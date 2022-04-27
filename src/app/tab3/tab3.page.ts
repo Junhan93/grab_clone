@@ -9,26 +9,16 @@ import { Component } from '@angular/core';
 export class Tab3Page {
 
   headers: ShortcutButton[]= [
-    {
-      logo: 'wallet',
-      name: 'Top Up'
-    },
-    {
-      logo: 'scan-circle',
-      name: 'Scan to Pay'
-    },
-    {
-      logo: 'trending-up',
-      name: 'Transfer'
-    },
-    {
-      logo: 'arrow-down-sharp',
-      name: 'Receive'
-    },
-    {
-      logo: 'globe',
-      name: 'Remittance'
-    },
+    { logo: 'wallet', name: 'Top Up' },
+    { logo: 'scan-circle', name: 'Scan to Pay' },
+    { logo: 'trending-up', name: 'Transfer' },
+    { logo: 'arrow-down-sharp', name: 'Receive' },
+    { logo: 'globe', name: 'Remittance' },
+  ];
+
+  cards: ShortcutCard[] = [
+    { title: 'GrabPay Wallet', amount: 20.22, details: 'View GrabPay Card Details' },
+    { title: 'PayLater', amount: 1200, details: 'View PayLater Details' },
   ];
 
   constructor() {}
@@ -40,4 +30,9 @@ export class Tab3Page {
 interface ShortcutButton {
   logo: string;
   name: string;
+}
+interface ShortcutCard {
+  title: string;
+  amount: number;
+  details: string;
 }

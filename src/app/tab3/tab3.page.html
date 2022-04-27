@@ -1,25 +1,47 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 3
+      Payment
     </ion-title>
   </ion-toolbar>
-</ion-header>
 
-<ion-content [fullscreen]="true">
-  <swiper [slidesPerView]="'auto'" class="shortcut-swiper">
-    <ng-template swiperSlide *ngFor="let header of headers">
-      <ion-button [ngStyle]="{width: '100px', paddingLeft: '10px'}">
-        <div class="icon-container">
-          <ion-icon name="{{ header.logo }}"></ion-icon>
-        </div>
-        <div class="label">
-          <ion-text [ngStyle]="{width: '80%', height: '25px', margin: '10px auto 0 auto'}">
-            {{ header.name }}
-          </ion-text>
-        </div>
+  <swiper [slidesPerView]="'auto'" class="shortcut-swiper-1">
+    <ng-template swiperSlide *ngFor="let card of cards">
+      <ion-button class="payment-card-container" color="white">
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title>{{ card.title }}</ion-card-title>
+            <ion-card-subtitle class="ion-text-left">
+              {{ card.amount }}
+            </ion-card-subtitle>
+          </ion-card-header>
+          <ion-card-content>
+            {{ card.details }}
+          </ion-card-content>
+        </ion-card>
       </ion-button>
     </ng-template>
   </swiper>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-list>
+    <swiper [slidesPerView]="'auto'" class="shortcut-swiper-2">
+      <ng-template swiperSlide *ngFor="let header of headers">
+        <ion-button>
+          <div class="icon-container">
+            <ion-icon name="{{ header.logo }}"></ion-icon>
+          </div>
+          <ion-text>
+            {{ header.name }}
+          </ion-text>
+        </ion-button>
+      </ng-template>
+    </swiper>
+
+    <ion-item>
+      This is blank space
+    </ion-item>
+  </ion-list>
 
 </ion-content>
