@@ -24,3 +24,86 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+@import "~swiper/css/bundle";
+
+// example of font-face
+@font-face {
+  font-family: 'Avenir';
+  src: url('assets/fonts/Avenir.ttc');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.shortcut-swiper {
+  padding: 15px 15px 15px 7px;
+  .swiper-slide {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    width: 70px;
+    position: relative;
+    > div {
+      .badge-unread-count {
+        position: absolute;
+        right: 0;
+        top: 0;
+        font: 8px/10px 'Muli-Bold';
+      }
+      .icon-container {
+        border-radius: 50%;
+        width: 55px;
+        height: 55px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.08);
+        .icon {
+          width: 24px;
+          height: auto;
+        }
+        &.scan {
+          background: rgba(161, 224, 224, 0.5);
+        }
+        &.chat {
+          background: rgba(255, 202, 149, 0.5);
+        }
+        &.calendar {
+          background: rgba(195, 222, 137, 0.5);
+        }
+        &.customers {
+          background: rgba(224, 193, 245, 0.5);
+        }
+        &.orders {
+          background: rgba(190, 230, 216, 0.5);
+        }
+        &.rewards {
+          background: rgba(255, 167, 181, 0.5);
+        }
+        &.staff {
+          background: rgba(255, 167, 181, 0.5);
+        }
+        &.favourites {
+          background: rgba(255, 241, 145, 0.5);
+        }
+        &.memos {
+          background: rgba(199, 224, 250, 0.5);
+        }
+        &.form {
+          background: rgba(243, 192, 212, 0.5);
+        }
+        &.agents {
+          background: rgba(224, 193, 245, 0.5);
+        }
+      }
+      .label {
+        color: #707070;
+        font: 11px/25px 'Muli-Bold';
+        text-align: center;
+        margin: 10px 0 0 0;
+        width: inherit;
+      }
+    }
+  }
+}

@@ -7,9 +7,19 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 3</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <swiper [slidesPerView]="'auto'" class="shortcut-swiper">
+    <ng-template swiperSlide *ngFor="let header of headers">
+      <ion-button [ngStyle]="{width: '100px', paddingLeft: '10px'}">
+        <div class="icon-container">
+          <ion-icon name="{{ header.logo }}"></ion-icon>
+        </div>
+        <div class="label">
+          <ion-text [ngStyle]="{width: '80%', height: '25px', margin: '10px auto 0 auto'}">
+            {{ header.name }}
+          </ion-text>
+        </div>
+      </ion-button>
+    </ng-template>
+  </swiper>
+
 </ion-content>
