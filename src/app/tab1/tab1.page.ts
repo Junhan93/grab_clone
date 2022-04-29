@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import SwiperCore, { EffectFade, Swiper } from 'swiper';
 
 SwiperCore.use([EffectFade]);
+
 @Component({
   selector: 'app-tab1',
   templateUrl: 'tab1.page.html',

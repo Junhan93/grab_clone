@@ -7,7 +7,7 @@
 
   <swiper [slidesPerView]="'auto'" class="shortcut-swiper-1">
     <ng-template swiperSlide *ngFor="let card of cards">
-      <ion-button class="payment-card-container" color="white">
+      <ion-button class="payment-card-container" color="white" (click)="viewCard()">
         <ion-card>
           <ion-card-header>
             <ion-card-title>{{ card.title }}</ion-card-title>

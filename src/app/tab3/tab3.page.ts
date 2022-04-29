@@ -23,6 +23,9 @@ export class Tab3Page {
 
   constructor() {}
 
+  viewCard() {
+    console.log('This works');
+  }
 
 
 }
